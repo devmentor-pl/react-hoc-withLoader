@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
@@ -12,7 +12,5 @@ import App from './components/App';
 //     && window.__REDUX_DEVTOOLS_EXTENSION__()
 // );
 
-ReactDOM.render(
-    <App />,
-    document.querySelector('#root')
-);
+const root = createRoot(document.querySelector('#root'));
+root.render(<App />);
